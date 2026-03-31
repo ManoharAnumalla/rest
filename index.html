@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SRR KOTHAPATNAM - A premium luxury dining experience where flavor meets art. Reserve your table today.">
+    <title>SRR KOTHAPATNAM | Where Flavor Meets Art</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+    <!-- Loading Screen -->
+    <div id="loader" class="loader">
+        <div class="spinner"></div>
+        <div class="loader-logo">SRR KOTHAPATNAM</div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">SRR <span>KOTHAPATNAM</span></a>
+            <div class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#testimonials">Reviews</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <a href="#reservations" class="btn btn-outline" style="margin-left: 1rem;">Reserve Table</a>
+                <button class="menu-toggle" aria-label="Open Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-nav">
+            <a href="#hero" class="mobile-link">Home</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#menu" class="mobile-link">Menu</a>
+            <a href="#gallery" class="mobile-link">Gallery</a>
+            <a href="#reservations" class="mobile-link">Reservations</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1514361892635-6b07e31e75f9?auto=format&fit=crop&q=80&w=2070" alt="Exquisite dark dining">
+            <div class="overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <h1 class="reveal-up">Where Flavor Meets <span>Art</span></h1>
+            <p class="reveal-up delay-1">Immerse yourself in a luxury culinary experience, crafted with passion and precision.</p>
+            <div class="hero-btns reveal-up delay-2">
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+                <a href="#reservations" class="btn btn-outline">Reserve Table</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container about-container wrapper-grid">
+            <div class="about-image parallax-bg reveal-left">
+                <img src="https://images.unsplash.com/photo-1544025162-811114cd354c?auto=format&fit=crop&q=80&w=1500" alt="Chef preparing fine dining">
+                <div class="glass-card experience-card">
+                    <h3>15+</h3>
+                    <p>Years of Culinary Excellence</p>
+                </div>
+            </div>
+            <div class="about-text reveal-right">
+                <h4 class="subtitle">Our Story</h4>
+                <h2>A Symphony of Tastes</h2>
+                <p>At SRR KOTHAPATNAM, we believe that dining is not merely about eating, but about embarking on a sensory journey. Our culinary philosophy centers on sourcing the finest local ingredients and bringing them to life through modern Gastronomy.</p>
+                <p>Every dish is meticulously constructed, creating a balance of flavors, textures, and visual elegance. Step into our world and experience Michelin-style luxury.</p>
+                <a href="#contact" class="btn btn-link">Discover Our Vibe <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu section dark-bg">
+        <div class="container">
+            <div class="section-header text-center reveal-up">
+                <h4 class="subtitle">Exquisite Offerings</h4>
+                <h2>Our Culinary Masterpieces</h2>
+            </div>
+            
+            <div class="menu-filters reveal-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="starters">Starters</button>
+                <button class="filter-btn" data-filter="mains">Main Course</button>
+                <button class="filter-btn" data-filter="desserts">Desserts</button>
+                <button class="filter-btn" data-filter="drinks">Drinks</button>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Starters -->
+                <div class="menu-item glass-card reveal-up starters">
+                    <div class="item-img"><img src="https://images.unsplash.com/photo-1626200419199-391ae4be7a41?auto=format&fit=crop&q=80&w=700" alt="Starter"></div>
+                    <div class="item-info">
+                        <div class="item-header">
+                            <h3>Truffle Mushroom Soup</h3>
+                            <span class="price">$18</span>
+                        </div>
+                        <p>Wild mushrooms, black truffle oil, micro herbs</p>
+                    </div>
+                </div>
+                <!-- Main Course -->
+                <div class="menu-item glass-card reveal-up delay-1 mains">
+                    <div class="item-img"><img src="https://images.unsplash.com/photo-1558500204-716b1ff2db7b?auto=format&fit=crop&q=80&w=700" alt="Main Course"></div>
+                    <div class="item-info">
+                        <div class="item-header">
+                            <h3>Wagyu Beef Filet</h3>
+                            <span class="price">$65</span>
+                        </div>
+                        <p>Grass-fed wagyu, pureed potato, red wine jus</p>
+                    </div>
+                </div>
+                <!-- Desserts -->
+                <div class="menu-item glass-card reveal-up delay-2 desserts">
+                    <div class="item-img"><img src="https://images.unsplash.com/photo-1563805042-7684c8a9e9bc?auto=format&fit=crop&q=80&w=700" alt="Dessert"></div>
+                    <div class="item-info">
+                        <div class="item-header">
+                            <h3>Gold Leaf Chocolate Dome</h3>
+                            <span class="price">$22</span>
+                        </div>
+                        <p>Dark chocolate, raspberry coulis, 24k gold</p>
+                    </div>
+                </div>
+                <!-- Drinks -->
+                <div class="menu-item glass-card reveal-up delay-1 drinks">
+                    <div class="item-img"><img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=700" alt="Drinks"></div>
+                    <div class="item-info">
+                        <div class="item-header">
+                            <h3>Smoked Old Fashioned</h3>
+                            <span class="price">$16</span>
+                        </div>
+                        <p>Bourbon, bitters, orange peel, hickory smoke</p>
+                    </div>
+                </div>
+                 <!-- Main Course 2 -->
+                 <div class="menu-item glass-card reveal-up mains">
+                    <div class="item-img"><img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=700" alt="Main Course"></div>
+                    <div class="item-info">
+                        <div class="item-header">
+                            <h3>Pan-Seared Scallops</h3>
+                            <span class="price">$42</span>
+                        </div>
+                        <p>Cauliflower puree, crispy pancetta, saffron emulsion</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery section">
+        <div class="container text-center">
+            <h4 class="subtitle reveal-up">Aesthetic</h4>
+            <h2 class="reveal-up">Visual Experience</h2>
+        </div>
+        <div class="masonry-grid container">
+            <div class="gallery-item reveal-up"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800" alt="Restaurant Interior" class="lightbox-trigger"></div>
+            <div class="gallery-item reveal-up delay-1"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=800" alt="Food Prep" class="lightbox-trigger"></div>
+            <div class="gallery-item reveal-up delay-2"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=800" alt="Fine dining dish" class="lightbox-trigger"></div>
+            <div class="gallery-item reveal-up"><img src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?auto=format&fit=crop&q=80&w=800" alt="Wine pouring" class="lightbox-trigger"></div>
+            <div class="gallery-item reveal-up delay-1"><img src="https://images.unsplash.com/photo-1590846406792-0adc7f928f1d?auto=format&fit=crop&q=80&w=800" alt="Desert" class="lightbox-trigger"></div>
+        </div>
+    </section>
+
+    <!-- Reservations Section -->
+    <section id="reservations" class="reservations section dark-bg">
+        <div class="container wrapper-grid">
+            <div class="res-text reveal-left">
+                <h4 class="subtitle">Book Your Experience</h4>
+                <h2>Reserve a Table</h2>
+                <p>To avoid disappointment, we highly recommend booking your table in advance. Experience the art of culinary excellence.</p>
+                <div class="contact-info mt-4">
+                    <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> reservations@srrkothapatnam.com</p>
+                </div>
+            </div>
+            <div class="res-form-wrapper glass-card reveal-right">
+                <form id="reservation-form" class="reservation-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col">
+                            <label for="date">Date</label>
+                            <input type="date" id="date" required>
+                        </div>
+                        <div class="col">
+                            <label for="time">Time</label>
+                            <input type="time" id="time" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <select id="guests">
+                            <option value="1">1 Person</option>
+                            <option value="2" selected>2 People</option>
+                            <option value="3">3 People</option>
+                            <option value="4">4 People</option>
+                            <option value="5+">5+ People</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">Confirm Reservation</button>
+                    <div class="form-success glass-card" style="display:none; margin-top:20px; text-align:center; padding: 20px;">
+                       <p style="color:var(--gold);"><i class="fas fa-check-circle"></i> Reservation Requested Successfully!</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+         <div class="container text-center">
+            <h4 class="subtitle reveal-up">Feedback</h4>
+            <h2 class="reveal-up">What Our Guests Say</h2>
+        </div>
+        <div class="container slider-container reveal-up">
+            <div class="testimonial-slider wrapper-grid" id="slider">
+                <div class="testimonial-card glass-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review">"Absolutely breathtaking experience. The truffle soup was divine, and the ambiance is unparalleled. A true Michelin-style dining night."</p>
+                    <h4>Sarah Jenkins</h4>
+                    <span>Food Critic</span>
+                </div>
+                <div class="testimonial-card glass-card">
+                     <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review">"SRR Kothapatnam redefines luxury dining. The gold leaf dessert was an absolute work of art. Highly recommended for special occasions."</p>
+                    <h4>Michael Chen</h4>
+                    <span>Entrepreneur</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+         <div class="container wrapper-grid">
+             <div class="contact-details reveal-left">
+                 <h4 class="subtitle">Location</h4>
+                 <h2>Find Us</h2>
+                 <p>Join us at our flagship location for an unforgettable evening.</p>
+                 <br>
+                 <div class="info-block">
+                     <i class="fas fa-map-marker-alt"></i>
+                     <div>
+                         <h4>Address</h4>
+                         <p>123 Culinary Avenue, Prime Plaza<br>Kothapatnam, 523286</p>
+                     </div>
+                 </div>
+                 <div class="info-block">
+                     <i class="fas fa-clock"></i>
+                     <div>
+                         <h4>Opening Hours</h4>
+                         <p>Mon - Fri: 5:00 PM - 11:00 PM<br>Sat - Sun: 12:00 PM - 11:30 PM</p>
+                     </div>
+                 </div>
+             </div>
+             <div class="map-container reveal-right glass-card">
+                 <!-- Embed Map iframe here -->
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15443.2088820464!2d79.9160534!3d15.4243642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4b0870ccbf5a77%3A0xcfd6da3a1fa06dfa!2sKothapatnam%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1711200000000!5m2!1sen!2sin" width="100%" height="400" style="border:0; border-radius: 12px; filter: invert(90%) hue-rotate(180deg);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+             </div>
+         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-wrapper">
+            <div class="footer-brand">
+                <a href="#" class="logo">SRR <span>KOTHAPATNAM</span></a>
+                <p>Where Flavor Meets Art in every bite. Experience the finest dining.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#reservations">Reservations</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Subscribe for exclusive invites and menu updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SRR Kothapatnam. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Enlarged view">
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
