@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Spice Aura • Premium Fixed</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+
+<style>
+:root{--primary:#ff4d4f;--bg:#fff;--text:#222}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Poppins,sans-serif;background:var(--bg);color:var(--text)}
+.dark{--bg:#121212;--text:#eee}
+
+/* NAVBAR IMPROVED */
+nav{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:var(--bg);position:sticky;top:0;z-index:1000;border-bottom:1px solid #eee}
+.logo{font-weight:700;color:var(--primary)}
+.menu{display:flex;gap:14px;flex-wrap:wrap}
+.menu a{text-decoration:none;color:var(--text);font-size:14px;position:relative;transition:0.3s}
+.menu a::after{content:'';position:absolute;width:0;height:2px;background:var(--primary);left:0;bottom:-4px;transition:0.3s}
+.menu a:hover::after{width:100%}
+.menu a:visited{color:var(--text)}
+.hamburger{display:none;font-size:24px;cursor:pointer}
+
+/* MOBILE MENU FIXED */
+.mobile{
+position:absolute;
+top:60px;
+left:0;
+width:100%;
+background:var(--bg);
+display:none;
+flex-direction:column;
+border-bottom:1px solid #eee;
+animation:slideDown .3s ease;
+}
+.mobile a{padding:14px;border-top:1px solid #eee;text-decoration:none;color:var(--text);transition:0.3s}
+.mobile a:hover{background:rgba(0,0,0,0.05);padding-left:20px}
+.mobile a:visited{color:var(--text)}
+.mobile.show{display:flex}
+
+@keyframes slideDown{
+from{opacity:0;transform:translateY(-10px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+.hero{padding:70px 20px;text-align:center;background:url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092')center/cover;color:#fff}
+
+.section{padding:30px 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+
+.card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.1);transition:.3s}
+.card:hover{transform:translateY(-5px)}
+.dark .card{background:#1e1e1e}
+.card img{width:100%;height:120px;object-fit:cover}
+.card .info{padding:10px}
+
+.btn{padding:10px 14px;border:none;background:var(--primary);color:#fff;border-radius:20px;margin-top:6px;width:100%}
+
+.cart-btn{position:fixed;bottom:15px;right:15px;background:var(--primary);color:#fff;padding:12px 16px;border-radius:30px}
+.cart{position:fixed;right:-100%;top:0;width:260px;height:100%;background:var(--bg);transition:.3s;padding:15px;overflow:auto}
+.cart.open{right:0}
+
+.slider{display:flex;gap:10px;overflow:auto}
+.slider img{height:140px;border-radius:10px}
+
+iframe{width:100%;height:200px;border:0}
+
+footer{text-align:center;padding:20px;font-size:14px}
+
+/* RESPONSIVE FIXES */
+@media(max-width:768px){
+.menu{display:none}
+.hamburger{display:block}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">Spice Aura</div>
+<div class="menu">
+<a href="#">Home</a>
+<a href="#menu">Menu</a>
+<a href="#order">Order</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+</nav>
+
+<div id="mobileMenu" class="mobile">
+<a href="#">Home</a>
+<a href="#menu">Menu</a>
+<a href="#order">Order</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+
+<section class="hero">
+<h1>Modern Indian Food</h1>
+<button class="btn" onclick="toggleDark()">🌙 Dark Mode</button>
+</section>
+
+<section id="menu" class="section">
+<h2>Menu</h2>
+<div class="grid" id="foods"></div>
+<button class="btn" onclick="gravity()">🧲 Fun Mode</button>
+</section>
+
+<section class="section">
+<h2>Gallery</h2>
+<div class="slider">
+<img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d">
+<img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398">
+<img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d">
+</div>
+</section>
+
+<section id="order" class="section">
+<h2>Order</h2>
+<input placeholder="Name" style="width:100%;padding:8px;margin:5px 0">
+<input placeholder="Phone" style="width:100%;padding:8px;margin:5px 0">
+<button class="btn">Place Order</button>
+</section>
+
+<!-- NEW PAGE SECTIONS -->
+<section id="about" class="section">
+<h2>About Us</h2>
+<p>Spice Aura brings modern Indian cuisine with premium quality and taste.</p>
+</section>
+
+<section id="contact" class="section">
+<h2>Contact</h2>
+<p>Email: spiceaura@email.com</p>
+<p>Phone: +91 9876543210</p>
+</section>
+
+<section class="section">
+<h2>Location</h2>
+<iframe src="https://maps.google.com/maps?q=Hyderabad&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</section>
+
+<div class="cart" id="cart"></div>
+<div class="cart-btn" onclick="toggleCart()">🛒</div>
+
+<footer>© 2026 Spice Aura</footer>
+
+<script>
+const data=[
+{name:'Butter Chicken',price:299,img:'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398'},
+{name:'Paneer Tikka',price:249,img:'https://images.unsplash.com/photo-1546833999-b9f581a1996d'},
+{name:'Biryani',price:199,img:'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d'}
+];
+
+const foods=document.getElementById('foods');
+const cartBox=document.getElementById('cart');
+let cart=[];
+
+function render(){
+foods.innerHTML='';
+data.forEach((f,i)=>{
+foods.innerHTML+=`<div class='card'>
+<img src='${f.img}'>
+<div class='info'>
+<h4>${f.name}</h4>
+<p>₹${f.price}</p>
+<button class='btn' onclick='add(${i})'>Add</button>
+</div></div>`
+})}
+render();
+
+function add(i){cart.push(data[i]);cartBox.innerHTML='<h3>Cart</h3>'+cart.map(x=>x.name).join('<br>')}
+function toggleCart(){cartBox.classList.toggle('open')}
+
+function toggleMenu(){
+document.getElementById('mobileMenu').classList.toggle('show')
+}
+
+function toggleDark(){document.body.classList.toggle('dark')}
+
+function gravity(){
+const {Engine,Render,Runner,Bodies,Composite}=Matter;
+const engine=Engine.create();
+const render=Render.create({element:document.body,engine});
+let boxes=data.map((_,i)=>Bodies.rectangle(200+i*80,100,100,40));
+const ground=Bodies.rectangle(400,600,810,60,{isStatic:true});
+Composite.add(engine.world,[...boxes,ground]);
+Render.run(render);Runner.run(Runner.create(),engine)
+}
+</script>
+
+</body>
+</html>
